@@ -25,28 +25,28 @@ El texto generado es editable en el momento. No hay que esperar a otra pantalla 
 <table>
 <tr>
 <td width="50%">
-<strong>Busqueda de pacientes</strong><br>
-Busca por nombre, telefono o CURP. Soporte para dictado por voz.
+<strong>Búsqueda de pacientes</strong><br>
+Busca por nombre, teléfono o CURP. Soporte para dictado por voz.
 <br><br>
 <img src="docs/screenshots/01-search.png" alt="Busqueda de pacientes">
 </td>
 <td width="50%">
 <strong>Expediente del paciente</strong><br>
-Tarjeta con datos demograficos, antecedentes editables, historial de consultas y laboratorios.
+Tarjeta con datos demográficos, antecedentes editables, historial de consultas y laboratorios.
 <br><br>
 <img src="docs/screenshots/02-patient.png" alt="Expediente del paciente">
 </td>
 </tr>
 <tr>
 <td width="50%">
-<strong>Seleccion de tipo de consulta</strong><br>
-6 tipos: general, seguimiento, urgencia, prenatal, revision de estudios, certificado medico. Cada uno muestra campos y placeholders diferentes.
+<strong>Selección de tipo de consulta</strong><br>
+6 tipos: general, seguimiento, urgencia, prenatal, revisión de estudios, certificado médico. Cada uno muestra campos y placeholders diferentes.
 <br><br>
 <img src="docs/screenshots/03-type-select.png" alt="Tipo de consulta">
 </td>
 <td width="50%">
-<strong>Formulario con expansion por IA</strong><br>
-Escribe keywords, presiona Enter, y la IA redacta el texto clinico. Editable in-place. Cada campo tiene dictado por voz.
+<strong>Formulario con expansión por IA</strong><br>
+Escribe keywords, presiona Enter, y la IA redacta el texto clínico. Editable in-place. Cada campo tiene dictado por voz.
 <br><br>
 <img src="docs/screenshots/04-ai-expansion.png" alt="Expansion por IA">
 </td>
@@ -54,7 +54,7 @@ Escribe keywords, presiona Enter, y la IA redacta el texto clinico. Editable in-
 <tr>
 <td colspan="2">
 <strong>Snippets personalizados</strong><br>
-El medico define sus propios atajos de texto. <code>#abdomen</code> se expande a su texto de exploracion abdominal. Organizados por categoria (exploracion fisica, indicaciones, signos vitales). Se pueden mezclar con texto libre: <code>#mgral omeprazol 20 cada 12</code> expande el snippet y manda el resto a la IA.
+El médico define sus propios atajos de texto. <code>#abdomen</code> se expande a su texto de exploración abdominal. Organizados por categoría (exploración física, indicaciones, signos vitales). Se pueden mezclar con texto libre: <code>#mgral omeprazol 20 cada 12</code> expande el snippet y manda el resto a la IA.
 <br><br>
 <img src="docs/screenshots/05-snippets.png" alt="Snippets">
 </td>
@@ -133,19 +133,19 @@ La base de datos se crea automaticamente en `data/expediente.db` con datos de de
 ```
 src/
   app/
-    consulta/                  Busqueda y registro de pacientes
+    consulta/                  Búsqueda y registro de pacientes
       [pacienteId]/            Detalle: antecedentes, labs, historial, nueva consulta
-        nueva-consulta/        Formulario + revision + completado
-      snippets/                Gestion de snippets
+        nueva-consulta/        Formulario + revisión + completado
+      snippets/                Gestión de snippets
       expedientes/             Lista de todos los pacientes
       historial/               Historial global de consultas
     api/
       patients/                CRUD pacientes
       notas/                   CRUD notas de evolucion
       snippets/                CRUD snippets
-      expand/                  Expansion de keywords por IA
-      cie10/                   Busqueda en catalogo CIE-10
-      referencia/              Referencia clinica rapida
+      expand/                  Expansión de keywords por IA
+      cie10/                   Búsqueda en catalogo CIE-10
+      referencia/              Referencia clínica rápida
   components/                  Componentes compartidos
   lib/
     db.ts                      Schema SQLite + seeding
@@ -154,7 +154,7 @@ src/
     format.ts                  Utilidades de formato
     constants.ts               Constantes compartidas
     download.ts                Descarga de archivos
-    nom004-validator.ts        Validacion NOM-004
+    nom004-validator.ts        Validación NOM-004
   types/
     expediente.ts              Tipos TypeScript
 ```
@@ -163,7 +163,7 @@ src/
 
 ## Limitaciones (MVP)
 
-- Sin autenticacion. El medico esta hardcoded como `demo-doc-1`.
+- Sin autenticación. El médico esta hardcoded como `demo-doc-1`.
 - Sin soporte mobile. El layout requiere pantallas de al menos 900px.
-- La seccion de consentimientos es un stub.
+- La sección de consentimientos es un stub.
 - SQLite local, no hay sync entre dispositivos.
