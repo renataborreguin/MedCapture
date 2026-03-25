@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  --sidebar-bg: #243b40;
+  --sidebar-bg-hover: #2f4d53;
+  --sidebar-text: #b0cdd2;
+  --sidebar-text-active: #ffffff;
+  --sidebar-accent: #4db6a8;
+  --sidebar-width: 256px;
+  --primary: #3d9b8f;
+  --primary-hover: #358a7f;
+  --primary-light: #e8f5f2;
+  --primary-foreground: #ffffff;
+  --bg-page: #f0f4f5;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  --border: #dde5e7;
+  --border-focus: #3d9b8f;
+  --text-primary: #1a2b2e;
+  --text-secondary: #5a6e72;
+  --text-muted: #8fa3a7;
+  --ai-bg: #edf7f4;
+  --ai-border: #b8e0d6;
+  --ai-icon: #3d9b8f;
+  --keyword-bg: #e8f5f2;
+  --keyword-text: #2a7a6f;
+  --keyword-border: #b8e0d6;
+  --success: #3d9b8f;
+  --success-bg: #edf7f4;
+  --warning: #d4930a;
+  --warning-bg: #fef9e7;
+  --warning-border: #f5e6a3;
+  --danger: #c76a55;
+  --danger-bg: #fdf0ed;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-dropdown: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: 150ms ease;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* Fix button cursor globally (Tailwind v4 reset removes it) */
+@layer base {
+  button, [role="button"] {
+    cursor: pointer;
+  }
+}
+
+/* Global input styling — visible on white backgrounds */
+@layer base {
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="search"],
+  input[type="date"],
+  textarea,
+  select {
+    background: #f7fafa !important;
+    border: 1.5px solid #c5d3d6 !important;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--text-primary);
+    outline: none;
+    width: 100%;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(61, 155, 143, 0.15) !important;
+    background: #ffffff !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--text-muted);
+  }
+}
+
+/* Tailwind v4: custom components must go in @layer to survive purging */
+@layer components {
+  .keyword-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--keyword-text);
+    background: var(--keyword-bg);
+    border: 1px solid var(--keyword-border);
+    border-radius: 4px;
+    padding: 2px 8px;
+  }
+
+  .ai-expansion {
+    background: var(--ai-bg);
+    border: 1px solid var(--ai-border);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-top: 8px;
+    position: relative;
+  }
+
+  .ai-expansion::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--primary);
+    border-radius: 3px 0 0 3px;
+  }
+
+  .cie10-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-dropdown);
+    z-index: 50;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 4px;
+  }
+
+  .cie10-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background var(--transition);
+    font-size: 14px;
+  }
+
+  .cie10-item:hover {
+    background: var(--primary-light);
+  }
+}
