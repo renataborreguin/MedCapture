@@ -1,18 +1,18 @@
 <h1>MedCapture</h1>
 
-<p>Expediente clinico electronico para consultorios. El medico escribe keywords o dicta por voz y la IA genera la nota clinica formal. Cumple con la estructura de NOM-004-SSA3-2012.</p>
+<p>Expediente clinico electrónico para consultorios. El médico escribe keywords o dicta por voz y la IA genera la nota clínica formal. Cumple con la estructura de NOM-004-SSA3-2012.</p>
 
 <br>
 
 ## Que es
 
-Un sistema donde el doctor escribe abreviaciones rapidas durante la consulta:
+Un sistema donde el doctor escribe abreviaciones rápidas durante la consulta:
 
 ```
 dolor abdominal epigastrico, pirosis, nausea
 ```
 
-Y la IA lo convierte en texto clinico listo para el expediente:
+Y la IA lo convierte en texto clínico listo para el expediente:
 
 > Paciente refiere dolor de tipo urente localizado en epigastrio, asociado a sensacion de ardor retroesternal (pirosis) y nauseas.
 
@@ -67,24 +67,24 @@ El medico define sus propios atajos de texto. <code>#abdomen</code> se expande a
 
 **Consulta**
 - 6 tipos de consulta con campos y placeholders contextuales
-- Expansion de keywords por IA (Gemini 2.5 Flash Lite) por seccion
-- Dictado por voz en todos los campos de texto y en busqueda de CIE-10
+- Expansión de keywords por IA (Gemini 2.5 Flash Lite) por sección
+- Dictado por voz en todos los campos de texto y en búsqueda de CIE-10
 - Texto generado editable antes de guardar
-- Autocompletado de diagnosticos CIE-10
-- Calculo automatico de IMC
+- Autocompletado de diagnósticos CIE-10
+- Cálculo automático de IMC
 - Barra de progreso por secciones completadas
-- Validacion NOM-004 en pantalla de revision
+- Validación NOM-004 en pantalla de revision
 - Descarga de consulta como .txt
 
 **Snippets**
-- Atajos de texto personalizados por medico
-- Expansion por categoria: un snippet de "exploracion" solo se activa en el campo de hallazgos
+- Atajos de texto personalizados por médico
+- Expansión por categoría: un snippet de "exploración" solo se activa en el campo de hallazgos
 - Combinables con texto libre (el snippet se pre-expande y el resto va a la IA)
 - CRUD completo con busqueda y filtros por categoria
 
 **Pacientes**
 - Registro con datos demograficos y antecedentes medicos completos
-- Busqueda por nombre, telefono o CURP
+- Búsqueda por nombre, teléfono o CURP
 - Antecedentes editables que persisten en BD
 - Historial de consultas y estudios por paciente
 - Descarga del expediente
