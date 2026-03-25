@@ -167,3 +167,4 @@ src/
 - Sin soporte mobile. El layout requiere pantallas de al menos 900px.
 - La sección de consentimientos es un stub.
 - SQLite local, no hay sync entre dispositivos.
+- Idealmente si se quiere incorporar se debe contar con LLM propios, para poder asegurar la privacidad y seguridad de los datos de los pacientes.
