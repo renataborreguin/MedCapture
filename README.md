@@ -2,9 +2,7 @@
 
 <p>Expediente clinico electrónico para consultorios. El médico escribe keywords o dicta por voz y la IA genera la nota clínica formal. Cumple con la estructura de NOM-004-SSA3-2012.</p>
 
-<a href="https://youtu.be/3icvKMJ6ZzY">
-  <img src="https://img.youtube.com/vi/3icvKMJ6ZzY/maxresdefault.jpg" alt="Ver video" width="600"/>
-</a>
+## Vídeo Demo
 [![Ver video](docs/01-search.png)](https://youtu.be/3icvKMJ6ZzY)
 <br>
 
