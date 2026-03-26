@@ -5,7 +5,7 @@
 <a href="https://youtu.be/3icvKMJ6ZzY">
   <img src="https://img.youtube.com/vi/3icvKMJ6ZzY/maxresdefault.jpg" alt="Ver video" width="600"/>
 </a>
-
+[![Ver video](docs/01-search.png)](https://youtu.be/3icvKMJ6ZzY)
 <br>
 
 ## ¿Qué es?
